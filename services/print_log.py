@@ -11,4 +11,12 @@ def save_log(response_code: str):
             file.write(f"{current_time} - Wystąpił błąd\n") 
     
     
+def read_log():
+    try:
+        with open('log.txt','r', encoding="utf-8") as file:
+            content = file.read()
+            print(content)
+            
+    except FileNotFoundError:
+        print("Plik log.txt nie istnieje!")
     

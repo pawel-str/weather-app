@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from services.fetch_weather import fetch_weather
+from services.print_log import read_log
 
 load_dotenv()
 
@@ -12,3 +13,5 @@ CITY = os.environ.get("CITY")
 weather = fetch_weather(API_KEY, CITY)
 
 print(weather)
+
+read_log()
